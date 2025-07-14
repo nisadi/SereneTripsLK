@@ -7,32 +7,45 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url('https://wallpapercat.com/w/full/7/8/8/639817-3072x2051-desktop-hd-sri-lanka-background.jpg') no-repeat center center/cover;
+  background: url('https://wallpapercat.com/w/full/7/8/8/639817-3072x2051-desktop-hd-sri-lanka-background.jpg') no-repeat center center/cover fixed;
   min-height: 100vh;
+  line-height: 1.6;
+  color: #333;
 }
 
 /* Heading Image Banner */
 .heading {
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px 80px;
   color: white;
-  background-size: cover;
-  background-position: center;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.heading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
 }
 
 .heading h1 {
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 900;
-  text-align: center;
   text-transform: uppercase;
   background: linear-gradient(90deg, #f7971e, #ffd200);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   animation: glowingHeading 2s ease-in-out infinite alternate;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 @keyframes glowingHeading {
@@ -44,24 +57,27 @@ body {
   }
 }
 
-
 /* Booking Section */
 .booking {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 20px;
-  background: rgba(255, 255, 255, 0.9);
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.95);
   max-width: 1000px;
-  margin: 40px auto;
+  margin: -40px auto 40px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
 }
 
 .heading-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   margin-bottom: 30px;
-  color: #333;
+  color: #222;
+  text-align: center;
+  font-weight: 700;
 }
 
 /* Form Styling */
@@ -71,48 +87,59 @@ body {
 
 .book-form .flex {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
 }
 
 .inputBox {
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 .inputBox span {
-  font-size: 15px;
+  font-size: 1rem;
   color: #444;
-  margin-bottom: 5px;
+  font-weight: 500;
 }
 
 .inputBox input {
-  padding: 10px 14px;
-  font-size: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  transition: border-color 0.3s ease;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
 }
 
 .inputBox input:focus {
   border-color: #007BFF;
   outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  background-color: #fff;
 }
 
 .inputBox input::placeholder {
-  color: #aaa;
+  color: #999;
+  opacity: 1;
+}
+
+/* Date inputs styling */
+.inputBox input[type="date"] {
+  appearance: none;
+  min-height: 44px;
 }
 
 /* Submit Button */
 .btn {
-  margin-top: 30px;
-  display: block;
+  margin-top: 40px;
+  display: block; /* Change from inline-block to block */
   width: 220px;
-  padding: 14px 20px;
+  padding: 16px 20px;
   background: linear-gradient(135deg, #888888, #555555);
   color: white;
-  font-size: 17px;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 600;
   text-transform: uppercase;
   border: none;
   border-radius: 50px;
@@ -121,30 +148,68 @@ body {
   transition: all 0.4s ease;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
   background: linear-gradient(135deg, #555555, #333333);
-  box-shadow: 0 0 20px rgba(85, 85, 85, 0.6), 0 0 40px rgba(51, 51, 51, 0.4);
+  box-shadow: 0 5px 20px rgba(85, 85, 85, 0.6), 0 0 40px rgba(51, 51, 51, 0.4);
   transform: translateY(-3px);
+  outline: none;
 }
 
+.btn:active {
+  transform: translateY(1px);
+}
 
 /* Responsive */
 @media (max-width: 768px) {
+  .heading {
+    padding: 40px 20px 60px;
+  }
+  
+  .booking {
+    padding: 30px 15px;
+    margin: -30px auto 30px;
+  }
+  
   .book-form .flex {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .btn {
     width: 100%;
+    max-width: 300px;
+    padding: 14px 20px;
   }
+}
 
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
   .heading h1 {
-    font-size: 2.2rem;
+    animation: none;
   }
+}
 
-  .heading-title {
-    font-size: 2rem;
+/* Print styles */
+@media print {
+  .booking {
+    background: white;
+    box-shadow: none;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .btn {
+    display: none;
   }
 }
