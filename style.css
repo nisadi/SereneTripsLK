@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --main-color: #8e44ad;
+    --black: #222;
+    --white: #fff;
+    --light-black: #777;
+    --light-white: #fff9;
+    --dark-bg: rgba(0,0,0,.7);
+    --light-bg: #eee;
+    --border: .1rem solid var(--black);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    --text-shadow: 0 1.5rem 3rem rgba(0,0,0,.3);
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    
+
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+    height: 1rem;
+
+}
+
+html::-webkit-scrollbar-track {
+    background-color: var(--white);
+
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+section {
+    padding: 5rem 10%;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.btn {
+    display: inline-block;
+    background: var(--black);
+    margin-top: 1rem;
+    color: var(--white);
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+.btn:hover {
+    background: var(--main-color);
+    color: var(--white);
+
+}
+
+.header {
+    position: sticky;
+    top: 0; right: 0; left: 0;
+    z-index: 1000;
+    background: linear-gradient(to right, #a9c5e0, #ebd253);
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.3s, padding 0.3s;
+}
+
+.header .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: var(--text-shadow);
+    background: linear-gradient(135deg);
+    -webkit-background-clip: text;
+    
+    transition: color 0.3s;
+
+}
+
+.header .navbar a {
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: var(--black);
+    transition: .2s linear;
+    position: relative;
+
+}
+
+.header .navbar a:hover {
+    color: var(--main-color);
+    box-shadow: var(--box-shadow);
+
+}
+
+#menu-btn {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+    display: none;
+    transition: .2s linear;
+
+}
+
+/* Swiper slide styles */
+
+.home {
+  padding: 0;
+  margin: 0;
+  height: 150; /* adjust if your header is 80px tall */
+  position: relative;
+  overflow: hidden;
+    background: var(--dark-bg);
+
+}
+
+.swiper-slide {
+    position: relative;
+    overflow: hidden;
+    min-height: 60rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover !important;
+    background-position: center !important;
+    text-align: center;
+    padding: 2rem;
+    color: var(--white);
+    font-size: 2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.swiper-slide video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.home .slide .content {
+    width: 80rem;
+    display: none;
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    padding: 2rem;
+    
+   
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.home .swiper-slide-active .content {
+    display: inline-block;
+    transform: translateY(0);
+    animation: fadeIn .2s linear backwards;
+
+}
+
+.home .slide .content span {
+    display: block;
+    font-size: 2.2rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    text-shadow: var(--text-shadow);
+    animation: fadeIn .2s linear backwards .2s;
+    
+}
+
+.home .slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    height: 89.9vh;
+    overflow: hidden;
+
+}
+
+.home .slide .content h3 {
+    font-size: 4vw;
+    color: rgb(18, 199, 235);
+    text-transform: uppercase;
+    line-height: 1;
+    text-shadow: var(--text-shadow);
+    padding: 1rem 3rem;
+    animation: fadeIn .2s linear backwards .4s;
+
+}
+
+.home .slide .content .btn {
+    animation: fadeIn .2s linear backwards .6s;
+    background: yellowgreen;
+    color: black;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    transition: background 0.3s, color 0.3s;
+}
+
+.home .swiper-button-next,
+.home .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color: rgb(159, 24, 244);
+    font-size: 30px;
+    z-index: 20;
+    cursor: pointer;
+    
+}
+
+.home .swiper-button-next:hover,
+.home .swiper-button-prev:hover {
+    background: var(--main-color);
+    color: var(--white);
+    box-shadow: var(--box-shadow);
+
+}
+
+.home .swiper-button-prev {
+    right: 8rem;
+    left: 2rem;
+    z-index: 10;
+
+}
+
+.home .swiper-button-next {
+    right: 2rem;
+    
+}
+
+/* Responsive */
+
+@media(max-width: 1200px) {
+    section {
+        padding: 3rem 5%;
+
+    }
+}
+
+@media(max-width: 991px) {
+    html {
+        font-size: 50%;
+
+    }
+    section {
+        padding: 3rem 2rem;
+
+    }
+    .home .slide .content h3 {
+        font-size: 10vw;
+    }
+}
+
+@media(max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+        transition: .2s linear;
+    }
+    #menu-btn.fa-times {
+        transform: rotate(180deg);
+    }
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        border-top: var(--border);
+        padding: 2rem;
+        transition: .2s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--box-shadow);
+
+    }
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+    }
+    .header .navbar a {
+        display: block;
+        margin: 2rem;
+        text-align: center;
+        font-size: 2.3rem;
+        color: var(--black);
+        transition: .2s linear;
+
+    }
+}
+
+@media(max-width: 450px) {
+    html {
+        font-size: 50%;
+
+    }
+}
