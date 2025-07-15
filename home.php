@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home</title>
+  <title>Home - SereneTripsLK</title>
 
   <!-- FontAwesome + Swiper + CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -26,7 +26,7 @@
     <div class="swiper home-slider">
       <div class="swiper-wrapper">
         
-        <div class="swiper-slide slide" >
+        <div class="swiper-slide slide">
             <video autoplay muted loop playsinline>
             <source src="https://media.istockphoto.com/id/2037434383/video/serene-aerial-view-of-woman-hiking-near-beautiful-waterfall-on-sri-lanka.mp4?b=1&s=mp4-640x640-is&k=20&c=FeARCVLr12bZ2B254L7yw8Vrm-DD-pxyceZBcqCB-TY=" type="video/mp4" />
             Your browser does not support the video tag.

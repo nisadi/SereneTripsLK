@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Now</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Book.css">
+    
 </head>
 <body style="background-image: url('https://wallpapercat.com/w/full/7/8/8/639817-3072x2051-desktop-hd-sri-lanka-background.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center; margin: 0;">
+
+    <section class="header">
+        <a href="home.html" class="logo">SereneTripsLK</a>
+        <nav class="navbar">
+        <a href="home.html">home</a>
+        <a href="about.php">about</a>
+        <a href="package.php">package</a>
+        <a href="Book.html">book</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </section>
 
     <div class="heading">
       <h1>Book Now</h1>
