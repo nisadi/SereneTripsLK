@@ -1,29 +1,9 @@
 <?php
 require_once 'config.php';
 
-// CSRF token function
-if (!function_exists('generateCSRFToken')) {
-    function generateCSRFToken() {
-        if (empty($_SESSION['csrf_token'])) {
-            $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-        }
-        return $_SESSION['csrf_token'];
-    }
-}
-
 if (isLoggedIn()) {
     header("Location: dashboard.php");
     exit;
-}
-
-// Input sanitization
-function sanitizeInput($data) {
-    if (is_array($data)) {
-        return array_map('sanitizeInput', $data);
-    }
-    $data = trim($data);
-    $data = htmlspecialchars($data, ENT_QUOTES | ENT_HTML5, 'UTF-8');
-    return stripslashes($data);
 }
 
 $error = '';
@@ -36,12 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $password = $_POST['password'];
 
         try {
-            // Query modified for plain password comparison
             $stmt = $pdo->prepare("SELECT id, username, password FROM admin_users WHERE username = ? LIMIT 1");
             $stmt->execute([$username]);
             $user = $stmt->fetch();
 
-            // Plain password comparison (INSECURE - only for demonstration)
             if ($user && $password === $user['password']) {
                 session_regenerate_id(true);
                 
@@ -51,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['ip_address'] = $_SERVER['REMOTE_ADDR'];
                 $_SESSION['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
                 $_SESSION['last_activity'] = time();
-                $_SESSION['fingerprint'] = hash_hmac('sha256', session_id(), 'your_secret_key_here');
                 
                 header("Location: dashboard.php");
                 exit;
