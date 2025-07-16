@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once __DIR__ . '/admin/config.php';
 
 // Fetch all packages from database
 $stmt = $pdo->query("SELECT * FROM packages ORDER BY created_at DESC");

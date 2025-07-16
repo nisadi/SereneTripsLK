@@ -28,6 +28,7 @@ $errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $package['title'] = trim($_POST['title'] ?? '');
+    $package['price'] = trim($_POST['price'] ?? '');
     $package['short_description'] = trim($_POST['short_description'] ?? '');
     $package['full_description'] = trim($_POST['full_description'] ?? '');
     
@@ -43,6 +44,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Validate
     if (empty($package['title'])) {
         $errors['title'] = 'Title is required';
+    }
+    if (empty($package['price']) || !is_numeric($package['price'])) {
+        $errors['price'] = 'Valid price is required';
     }
     if (empty($package['short_description'])) {
         $errors['short_description'] = 'Short description is required';
@@ -81,6 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = $pdo->prepare("
             UPDATE packages SET 
             title = ?, 
+            price = ?,
             short_description = ?, 
             full_description = ?, 
             image_path = ?, 
@@ -89,6 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ");
         $stmt->execute([
             $package['title'],
+            $package['price'],
             $package['short_description'],
             $package['full_description'],
             $image_path,
@@ -147,6 +153,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             font-size: 1rem;
             font-family: inherit;
         }
+        .form-group input[type="number"] {
+            max-width: 200px;
+        }
         .form-group textarea {
             min-height: 100px;
         }
@@ -193,12 +202,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             margin-top: 0.5rem;
             display: block;
         }
+        .btn-delete {
+            background: #e74c3c;
+            color: white;
+            padding: 0 0.5rem;
+        }
     </style>
 </head>
 <body>
     <div class="admin-header">
         <h2>Edit Package</h2>
-        <a href="index.php" class="logout-btn">Back to Packages</a>
+        <a href="dashboard.php" class="logout-btn">Back to Packages</a>
     </div>
 
     <div class="admin-container">
@@ -208,6 +222,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="text" id="title" name="title" value="<?= htmlspecialchars($package['title']) ?>">
                 <?php if (isset($errors['title'])): ?>
                     <div class="error"><?= $errors['title'] ?></div>
+                <?php endif; ?>
+            </div>
+            
+            <div class="form-group">
+                <label for="price">Price (USD)</label>
+                <input type="number" id="price" name="price" step="0.01" min="0" value="<?= htmlspecialchars($package['price']) ?>">
+                <?php if (isset($errors['price'])): ?>
+                    <div class="error"><?= $errors['price'] ?></div>
                 <?php endif; ?>
             </div>
             
@@ -257,7 +279,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             <div class="form-group">
                 <button type="submit" class="btn btn-submit">Update Package</button>
-                <a href="index.php" class="btn btn-cancel">Cancel</a>
+                <a href="dashboard.php" class="btn btn-cancel">Cancel</a>
             </div>
         </form>
     </div>

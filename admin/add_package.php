@@ -9,6 +9,7 @@ if (!isLoggedIn()) {
 $errors = [];
 $package = [
     'title' => '',
+    'price' => '',
     'short_description' => '',
     'full_description' => '',
     'includes' => ["Item 1", "Item 2", "Item 3"]
@@ -16,6 +17,7 @@ $package = [
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $package['title'] = trim($_POST['title'] ?? '');
+    $package['price'] = trim($_POST['price'] ?? '');
     $package['short_description'] = trim($_POST['short_description'] ?? '');
     $package['full_description'] = trim($_POST['full_description'] ?? '');
     
@@ -31,6 +33,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Validate
     if (empty($package['title'])) {
         $errors['title'] = 'Title is required';
+    }
+    if (empty($package['price']) || !is_numeric($package['price'])) {
+        $errors['price'] = 'Valid price is required';
     }
     if (empty($package['short_description'])) {
         $errors['short_description'] = 'Short description is required';
@@ -66,11 +71,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($errors)) {
         $stmt = $pdo->prepare("
             INSERT INTO packages 
-            (title, short_description, full_description, image_path, includes) 
-            VALUES (?, ?, ?, ?, ?)
+            (title, price, short_description, full_description, image_path, includes) 
+            VALUES (?, ?, ?, ?, ?, ?)
         ");
         $stmt->execute([
             $package['title'],
+            $package['price'],
             $package['short_description'],
             $package['full_description'],
             $image_path,
@@ -92,35 +98,54 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Add Package</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #8e44ad;
+            --success-color: #2ecc71;
+            --danger-color: #e74c3c;
+            --info-color: #3498db;
+            --gray-color: #95a5a6;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+            --white: #ffffff;
+        }
+        
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f5f5f5;
+            background: var(--light-bg);
+            color: var(--text-color);
         }
+        
         .admin-header {
-            background: #8e44ad;
-            color: white;
+            background: var(--primary-color);
+            color: var(--white);
             padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+        
         .admin-container {
             max-width: 800px;
             margin: 2rem auto;
-            padding: 0 1rem;
+            padding: 0 1.5rem;
         }
+        
         .form-group {
             margin-bottom: 1.5rem;
         }
+        
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
         }
+        
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 0.8rem;
             border: 1px solid #ddd;
@@ -128,14 +153,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             font-size: 1rem;
             font-family: inherit;
         }
+        
+        .form-group input[type="number"] {
+            width: 200px;
+        }
+        
         .form-group textarea {
             min-height: 100px;
         }
+        
         .error {
-            color: #e74c3c;
+            color: var(--danger-color);
             font-size: 0.9rem;
             margin-top: 0.3rem;
         }
+        
         .btn {
             padding: 0.8rem 1.5rem;
             border: none;
@@ -143,38 +175,81 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             cursor: pointer;
             text-decoration: none;
             font-size: 1rem;
+            transition: all 0.2s;
         }
+        
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+        
         .btn-submit {
-            background: #2ecc71;
-            color: white;
+            background: var(--success-color);
+            color: var(--white);
         }
+        
         .btn-cancel {
-            background: #95a5a6;
-            color: white;
+            background: var(--gray-color);
+            color: var(--white);
         }
-        .include-item {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .include-item input {
-            flex: 1;
-        }
+        
         .btn-add-include {
-            background: #3498db;
-            color: white;
+            background: var(--info-color);
+            color: var(--white);
             padding: 0.5rem 1rem;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             margin-bottom: 1rem;
         }
+        
+        .include-item {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .include-item input {
+            flex: 1;
+        }
+        
+        .btn-delete {
+            background: var(--danger-color);
+            color: var(--white);
+            padding: 0 0.8rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .logout-btn {
+            color: var(--white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        
+        .logout-btn:hover {
+            background: rgba(255,255,255,0.2);
+            text-decoration: none;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 1rem;
+        }
     </style>
 </head>
 <body>
     <div class="admin-header">
         <h2>Add New Package</h2>
-        <a href="index.php" class="logout-btn">Back to Packages</a>
+        <a href="dashboard.php" class="logout-btn">
+            <i class="fas fa-arrow-left"></i> Back to Packages
+        </a>
     </div>
 
     <div class="admin-container">
@@ -184,6 +259,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="text" id="title" name="title" value="<?= htmlspecialchars($package['title']) ?>">
                 <?php if (isset($errors['title'])): ?>
                     <div class="error"><?= $errors['title'] ?></div>
+                <?php endif; ?>
+            </div>
+            
+            <div class="form-group">
+                <label for="price">Price (USD)</label>
+                <input type="number" id="price" name="price" step="0.01" min="0" value="<?= htmlspecialchars($package['price']) ?>">
+                <?php if (isset($errors['price'])): ?>
+                    <div class="error"><?= $errors['price'] ?></div>
                 <?php endif; ?>
             </div>
             
@@ -217,7 +300,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <?php foreach ($package['includes'] as $index => $item): ?>
                         <div class="include-item">
                             <input type="text" name="includes[]" value="<?= htmlspecialchars($item) ?>">
-                            <button type="button" class="btn btn-delete" onclick="removeInclude(this)">×</button>
+                            <button type="button" class="btn-delete" onclick="removeInclude(this)">×</button>
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -227,9 +310,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <button type="button" class="btn-add-include" onclick="addInclude()">Add Inclusion</button>
             </div>
             
-            <div class="form-group">
+            <div class="form-group button-group">
                 <button type="submit" class="btn btn-submit">Save Package</button>
-                <a href="index.php" class="btn btn-cancel">Cancel</a>
+                <a href="dashboard.php" class="btn btn-cancel">Cancel</a>
             </div>
         </form>
     </div>
@@ -241,7 +324,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             div.className = 'include-item';
             div.innerHTML = `
                 <input type="text" name="includes[]" placeholder="Included item">
-                <button type="button" class="btn btn-delete" onclick="removeInclude(this)">×</button>
+                <button type="button" class="btn-delete" onclick="removeInclude(this)">×</button>
             `;
             container.appendChild(div);
         }
