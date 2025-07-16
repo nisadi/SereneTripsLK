@@ -12,6 +12,13 @@ if (!isLoggedIn() || !isset($_SESSION['admin_logged_in']) || $_SESSION['admin_lo
     exit;
 }
 
+// Check for success message from update_booking.php
+$success_message = '';
+if (isset($_SESSION['message'])) {
+    $success_message = $_SESSION['message'];
+    unset($_SESSION['message']);
+}
+
 try {
     // Get all bookings with package details using prepared statement
     $stmt = $pdo->prepare("
@@ -156,7 +163,9 @@ try {
         }
         
         .action-btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             padding: 6px 12px;
             border-radius: 4px;
             color: var(--white);
@@ -164,6 +173,13 @@ try {
             font-size: 0.85rem;
             margin-right: 5px;
             transition: all 0.2s;
+            min-width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        
+        .action-btn i {
+            pointer-events: none;
         }
         
         .action-btn:hover {
@@ -208,6 +224,14 @@ try {
             color: #666;
         }
         
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            color: white;
+            background-color: var(--success-color);
+        }
+        
         @media (max-width: 768px) {
             .admin-container {
                 padding: 0 1rem;
@@ -226,7 +250,7 @@ try {
             <a href="dashboard.php" style="color: white; text-decoration: none; font-size: 1.2rem;" title="Back to Dashboard">
                 <i class="fas fa-arrow-left"></i>
             </a>
-            <h2>Bookings Management</h2>
+            <h2>Bookings</h2>
         </div>
         <a href="logout.php" class="logout-btn">
             <i class="fas fa-sign-out-alt"></i> Logout
@@ -234,6 +258,12 @@ try {
     </div>
 
     <div class="admin-container">
+        <?php if (!empty($success_message)): ?>
+            <div class="alert">
+                <?= htmlspecialchars($success_message) ?>
+            </div>
+        <?php endif; ?>
+        
         <div class="stats">
             <div class="stat-card">
                 <h3>Total Bookings</h3>
@@ -335,6 +365,24 @@ try {
                         "previous": "Previous"
                     }
                 }
+            });
+            
+            // Ensure action buttons work even if DataTable interferes
+            $(document).on('click', '.action-btn', function(e) {
+                // You can add confirmation for certain actions
+                if ($(this).hasClass('btn-cancel')) {
+                    if (!confirm('Are you sure you want to cancel this booking?')) {
+                        e.preventDefault();
+                        return false;
+                    }
+                }
+                if ($(this).hasClass('btn-confirm')) {
+                    if (!confirm('Are you sure you want to confirm this booking?')) {
+                        e.preventDefault();
+                        return false;
+                    }
+                }
+                return true;
             });
         });
     </script>
