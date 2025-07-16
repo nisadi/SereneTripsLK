@@ -85,9 +85,22 @@ $packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
             display: inline-block;
             padding: 0.8rem 1.5rem;
         }
+        .btn-bookings {
+            background: #8e44ad;
+            color: white;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            margin-left: 1rem;
+        }
         .logout-btn {
             color: white;
             text-decoration: none;
+        }
+        .admin-actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
         }
     </style>
 </head>
@@ -98,7 +111,14 @@ $packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
     <div class="admin-container">
-        <a href="add_package.php" class="btn btn-add">Add New Package</a>
+        <div class="admin-actions">
+            <a href="add_package.php" class="btn btn-add">
+                <i class="fas fa-plus"></i> Add New Package
+            </a>
+            <a href="bookings.php" class="btn btn-bookings">
+                <i class="fas fa-calendar-check"></i> View Bookings
+            </a>
+        </div>
         
         <div class="package-grid">
             <?php foreach ($packages as $package): ?>
@@ -108,8 +128,12 @@ $packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <h3><?= htmlspecialchars($package['title']) ?></h3>
                         <p><?= substr(htmlspecialchars($package['short_description']), 0, 100) ?>...</p>
                         <div class="package-actions">
-                            <a href="edit_package.php?id=<?= $package['id'] ?>" class="btn btn-edit">Edit</a>
-                            <a href="delete_package.php?id=<?= $package['id'] ?>" class="btn btn-delete" onclick="return confirm('Are you sure you want to delete this package?')">Delete</a>
+                            <a href="edit_package.php?id=<?= $package['id'] ?>" class="btn btn-edit">
+                                <i class="fas fa-edit"></i> Edit
+                            </a>
+                            <a href="delete_package.php?id=<?= $package['id'] ?>" class="btn btn-delete" onclick="return confirm('Are you sure you want to delete this package?')">
+                                <i class="fas fa-trash"></i> Delete
+                            </a>
                         </div>
                     </div>
                 </div>
