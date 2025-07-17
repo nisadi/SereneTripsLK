@@ -1,8 +1,11 @@
 <?php
+//Connects to the database using a config file
 require_once __DIR__ . '/admin/config.php';
 
-// Fetch all packages from database
+//Fetches all travel packages from the database, ordered by newest first
 $stmt = $pdo->query("SELECT * FROM packages ORDER BY created_at DESC");
+
+//Stores all packages in a variable called $packages
 $packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
@@ -32,34 +35,40 @@ $packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
         <div class="box-container">
             <?php foreach(array_chunk($packages, 4) as $packageRow): ?>
-                <?php foreach($packageRow as $package): ?>
-                    <div class="box">
-                        <div class="image">
-                            <img src="<?= htmlspecialchars($package['image_path']) ?>" alt="<?= htmlspecialchars($package['title']) ?>">
-                        </div>
-                        <div class="content">
-                            <h3><?= htmlspecialchars($package['title']) ?></h3>
-                            <p class="short-desc"><?= htmlspecialchars($package['short_description']) ?></p>
-                            <div class="full-desc" style="display: none;">
-                                <p><?= htmlspecialchars($package['full_description']) ?></p>
-                                <div class="package-details">
-                                    <h4>Package Includes:</h4>
-                                    <ul>
-                                        <?php 
-                                        $includes = json_decode($package['includes'], true);
-                                        foreach($includes as $item): 
-                                        ?>
-                                            <li><?= htmlspecialchars($item) ?></li>
-                                        <?php endforeach; ?>
-                                    </ul>
-                                </div>
-                            </div>
-                            <button class="read-more-btn">Read More</button>
-                            <a href="book.php?package=<?= $package['id'] ?>" class="btn">Book Now</a>
-                        </div>
+            <?php foreach($packageRow as $package): ?>
+                <div class="box">
+                    <div class="image">
+                        <img src="<?= htmlspecialchars($package['image_path']) ?>" alt="<?= htmlspecialchars($package['title']) ?>">
                     </div>
-                <?php endforeach; ?>
+                    <div class="content">
+                        <h3><?= htmlspecialchars($package['title']) ?></h3>
+                        <p class="short-desc"><?= htmlspecialchars($package['short_description']) ?></p>
+                        
+                        <div class="price">
+                            <span class="price-label">Price per person:</span>
+                            <span class="price-value">$<?= number_format($package['price'], 2) ?></span>
+                        </div>
+                        
+                        <div class="full-desc" style="display: none;">
+                            <p><?= htmlspecialchars($package['full_description']) ?></p>
+                            <div class="package-details">
+                                <h4>Package Includes:</h4>
+                                <ul>
+                                    <?php 
+                                    $includes = json_decode($package['includes'], true);
+                                    foreach($includes as $item): 
+                                    ?>
+                                        <li><?= htmlspecialchars($item) ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="read-more-btn">Read More</button>
+                        <a href="book.php?package=<?= $package['id'] ?>" class="btn">Book Now</a>
+                    </div>
+                </div>
             <?php endforeach; ?>
+        <?php endforeach; ?>
         </div>
     </section>
 
