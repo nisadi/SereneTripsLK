@@ -196,12 +196,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit_review'])) {
                             <input type="email" id="email" name="email" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label>Your Rating</label>
-                            <div class="rating-stars">
-                                <?php for ($i = 1; $i <= 5; $i++): ?>
-                                    <input type="radio" id="star<?= $i ?>" name="rating" value="<?= $i ?>" <?= $i === 1 ? 'required' : '' ?>>
-                                    <label for="star<?= $i ?>">★</label>
-                                <?php endfor; ?>
+                            <label for="rating">Your Rating</label>
+                            <div class="rating-container">
+                                <div class="rating-stars">
+                                    <input type="radio" id="star5" name="rating" value="5" required>
+                                    <label for="star5" title="Excellent">★</label>
+                                    <input type="radio" id="star4" name="rating" value="4">
+                                    <label for="star4" title="Very Good">★</label>
+                                    <input type="radio" id="star3" name="rating" value="3">
+                                    <label for="star3" title="Good">★</label>
+                                    <input type="radio" id="star2" name="rating" value="2">
+                                    <label for="star2" title="Fair">★</label>
+                                    <input type="radio" id="star1" name="rating" value="1">
+                                    <label for="star1" title="Poor">★</label>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">

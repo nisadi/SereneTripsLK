@@ -43,38 +43,44 @@ $packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
             flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 20px;
+            align-items: stretch; /* Ensures all buttons stretch to same height */
         }
+
         .btn {
             display: inline-flex;
             align-items: center;
-            padding: 10px 15px;
+            justify-content: center;
+            padding: 12px 20px;
             border-radius: 5px;
             color: white;
             text-decoration: none;
             font-size: 14px;
             transition: all 0.3s ease;
+            min-width: 180px;
+            height: 44px; /* Fixed height for all buttons */
+            box-sizing: border-box;
+            line-height: 1; /* Ensures text alignment is consistent */
         }
+
         .btn i {
             margin-right: 8px;
+            width: 16px;
+            text-align: center;
+            font-size: 16px; /* Ensures icons are same size */
         }
+
+        /* Button color classes */
+        .btn-add { background-color: #2ecc71; }
+        .btn-bookings { background-color: #3498db; }
+        .btn-reviews { background-color: #f39c12; }
+        .btn-about { background-color: #9b59b6; }
+        .btn-contact { background-color: #1abc9c; }
+
+        /* Hover effects */
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .btn-add {
-            background-color: #2ecc71; /* Green */
-        }
-        .btn-bookings {
-            background-color: #3498db; /* Blue */
-        }
-        .btn-reviews {
-            background-color: #f39c12; /* Orange */
-        }
-        .btn-about {
-            background-color: #9b59b6; /* Purple */
-        }
-        .btn-contact {
-            background-color: #1abc9c; /* Teal */
+            filter: brightness(1.05); /* Consistent hover effect */
         }
         .package-grid {
             display: grid;

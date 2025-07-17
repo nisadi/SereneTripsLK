@@ -17,3 +17,9 @@ var swiper = new Swiper(".home-slider", {
     disableOnInteraction: false,
   },
 });
+
+document.querySelectorAll('.rating-stars input').forEach(star => {
+        star.addEventListener('change', function() {
+            console.log('Rating selected:', this.value);
+        });
+    });

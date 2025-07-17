@@ -196,7 +196,12 @@ if (isset($_SESSION['message'])) {
 </head>
 <body>
     <div class="admin-header">
-        <h2>Manage Reviews</h2>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <a href="dashboard.php" style="color: white; text-decoration: none; font-size: 1.2rem;" title="Back to Dashboard">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <h2>Reviews</h2>
+        </div>
         <a href="logout.php" class="logout-btn">
             <i class="fas fa-sign-out-alt"></i> Logout
         </a>

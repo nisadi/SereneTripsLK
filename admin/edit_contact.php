@@ -70,7 +70,7 @@ try {
         }
         
         .admin-header {
-            background-color: var(--dark-color);
+            background: linear-gradient(to right, #b602b6, #750587);
             color: white;
             padding: 15px 20px;
             display: flex;
@@ -164,7 +164,12 @@ try {
 </head>
 <body>
     <div class="admin-header">
-        <h2>Edit Contact Information</h2>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <a href="dashboard.php" style="color: white; text-decoration: none; font-size: 1.2rem;" title="Back to Dashboard">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <h2>Edit Contact Information</h2>
+        </div>
         <a href="logout.php" class="logout-btn">
             <i class="fas fa-sign-out-alt"></i> Logout
         </a>
