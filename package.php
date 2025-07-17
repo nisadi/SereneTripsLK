@@ -23,9 +23,6 @@ $packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <a href="about.php">about</a>
             <a href="package.php">package</a>
             <a href="book.php">book</a>
-            <?php if(isLoggedIn()): ?>
-                <a href="admin/">Admin Panel</a>
-            <?php endif; ?>
         </nav>
         <div id="menu-btn" class="fas fa-bars"></div>
     </section>

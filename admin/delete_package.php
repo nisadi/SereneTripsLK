@@ -31,6 +31,6 @@ if ($package) {
     $_SESSION['success_message'] = 'Package deleted successfully';
 }
 
-header('Location: index.php');
+header('Location: dashboard.php');
 exit;
 ?>

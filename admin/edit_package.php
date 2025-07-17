@@ -7,7 +7,7 @@ if (!isLoggedIn()) {
 }
 
 if (!isset($_GET['id'])) {
-    header('Location: index.php');
+    header('Location: dashboard.php');
     exit;
 }
 
@@ -17,7 +17,7 @@ $stmt->execute([$packageId]);
 $package = $stmt->fetch();
 
 if (!$package) {
-    header('Location: index.php');
+    header('Location: dashboard.php');
     exit;
 }
 
@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
         
         $_SESSION['success_message'] = 'Package updated successfully';
-        header('Location: index.php');
+        header('Location: dashboard.php');
         exit;
     }
 }
@@ -124,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             background: #f5f5f5;
         }
         .admin-header {
-            background: #8e44ad;
+            background: linear-gradient(to right, #b602b6, #750587);
             color: white;
             padding: 1rem 2rem;
             display: flex;

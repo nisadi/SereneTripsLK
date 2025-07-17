@@ -26,7 +26,7 @@ $packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
             background: #f5f5f5;
         }
         .admin-header {
-            background: #8e44ad;
+            background: linear-gradient(to right, #b602b6, #750587);
             color: white;
             padding: 1rem 2rem;
             display: flex;
@@ -35,8 +35,46 @@ $packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
         .admin-container {
             max-width: 1200px;
-            margin: 2rem auto;
+            margin: 2rem auto; 
             padding: 0 1rem;
+        }
+        .admin-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .btn i {
+            margin-right: 8px;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .btn-add {
+            background-color: #2ecc71; /* Green */
+        }
+        .btn-bookings {
+            background-color: #3498db; /* Blue */
+        }
+        .btn-reviews {
+            background-color: #f39c12; /* Orange */
+        }
+        .btn-about {
+            background-color: #9b59b6; /* Purple */
+        }
+        .btn-contact {
+            background-color: #1abc9c; /* Teal */
         }
         .package-grid {
             display: grid;
@@ -102,6 +140,18 @@ $packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
             gap: 1rem;
             margin-bottom: 1.5rem;
         }
+
+                /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .admin-actions {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -117,6 +167,15 @@ $packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </a>
             <a href="bookings.php" class="btn btn-bookings">
                 <i class="fas fa-calendar-check"></i> View Bookings
+            </a>
+            <a href="admin_reviews.php" class="btn btn-reviews">
+                <i class="fas fa-star"></i> View Reviews
+            </a>
+            <a href="edit_about.php" class="btn btn-about">
+                <i class="fas fa-info-circle"></i> Edit About Page
+            </a>
+            <a href="edit_contact.php" class="btn btn-contact">
+                <i class="fas fa-address-book"></i> Edit Contact Info
             </a>
         </div>
         

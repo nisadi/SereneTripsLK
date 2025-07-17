@@ -68,7 +68,7 @@ try {
         }
         
         .admin-header {
-            background: var(--primary-color);
+            background: linear-gradient(to right, #b602b6, #750587);
             color: var(--white);
             padding: 1rem 2rem;
             display: flex;

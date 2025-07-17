@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
         
         $_SESSION['success_message'] = 'Package added successfully';
-        header('Location: index.php');
+        header('Location: dashboard.php');
         exit;
     }
 }
