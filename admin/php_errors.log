@@ -1,0 +1,91 @@
+[15-Jul-2025 20:22:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 17
+[15-Jul-2025 20:22:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 19
+[15-Jul-2025 20:22:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 20
+[15-Jul-2025 20:22:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[15-Jul-2025 20:22:59 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 23
+[15-Jul-2025 20:22:59 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 94
+[15-Jul-2025 20:26:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 17
+[15-Jul-2025 20:26:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 19
+[15-Jul-2025 20:26:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 20
+[15-Jul-2025 20:26:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[15-Jul-2025 20:26:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 23
+[15-Jul-2025 20:26:23 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 94
+[16-Jul-2025 06:46:13 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[16-Jul-2025 06:46:13 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 24
+[16-Jul-2025 06:46:13 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 25
+[16-Jul-2025 06:46:13 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 27
+[16-Jul-2025 06:46:13 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 28
+[16-Jul-2025 06:46:13 Europe/Berlin] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 38
+[16-Jul-2025 06:52:00 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp\htdocs\SereneTripsLK\admin\config.php on line 41
+[16-Jul-2025 06:52:29 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 20
+[16-Jul-2025 06:52:29 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[16-Jul-2025 06:52:29 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 23
+[16-Jul-2025 06:52:29 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 25
+[16-Jul-2025 06:52:29 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 26
+[16-Jul-2025 06:52:29 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp\htdocs\SereneTripsLK\admin\config.php on line 41
+[16-Jul-2025 06:57:02 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp\htdocs\SereneTripsLK\admin\config.php on line 41
+[16-Jul-2025 06:57:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 20
+[16-Jul-2025 06:57:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[16-Jul-2025 06:57:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 23
+[16-Jul-2025 06:57:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 25
+[16-Jul-2025 06:57:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 26
+[16-Jul-2025 07:48:31 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp\htdocs\SereneTripsLK\admin\config.php on line 41
+[16-Jul-2025 07:49:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 20
+[16-Jul-2025 07:49:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[16-Jul-2025 07:49:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 23
+[16-Jul-2025 07:49:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 25
+[16-Jul-2025 07:49:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 26
+[16-Jul-2025 09:04:01 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp\htdocs\SereneTripsLK\admin\config.php on line 41
+[16-Jul-2025 09:04:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 20
+[16-Jul-2025 09:04:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[16-Jul-2025 09:04:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 23
+[16-Jul-2025 09:04:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 25
+[16-Jul-2025 09:04:49 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 26
+[16-Jul-2025 09:06:14 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 20
+[16-Jul-2025 09:06:14 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[16-Jul-2025 09:06:14 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 23
+[16-Jul-2025 09:06:14 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 25
+[16-Jul-2025 09:06:14 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 26
+[16-Jul-2025 09:17:53 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp\htdocs\SereneTripsLK\admin\config.php on line 41
+[16-Jul-2025 09:17:55 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 20
+[16-Jul-2025 09:17:55 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[16-Jul-2025 09:17:55 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 23
+[16-Jul-2025 09:17:55 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 25
+[16-Jul-2025 09:17:55 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 26
+[16-Jul-2025 12:02:40 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp\htdocs\SereneTripsLK\admin\config.php on line 41
+[16-Jul-2025 12:02:42 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 20
+[16-Jul-2025 12:02:42 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[16-Jul-2025 12:02:42 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 23
+[16-Jul-2025 12:02:42 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 25
+[16-Jul-2025 12:02:42 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 26
+[16-Jul-2025 12:14:09 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp\htdocs\SereneTripsLK\admin\config.php on line 41
+[16-Jul-2025 12:15:03 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 20
+[16-Jul-2025 12:15:03 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[16-Jul-2025 12:15:03 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 23
+[16-Jul-2025 12:15:03 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 25
+[16-Jul-2025 12:15:03 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 26
+[16-Jul-2025 12:29:23 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp\htdocs\SereneTripsLK\admin\config.php on line 41
+[16-Jul-2025 12:29:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 20
+[16-Jul-2025 12:29:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[16-Jul-2025 12:29:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 23
+[16-Jul-2025 12:29:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 25
+[16-Jul-2025 12:29:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 26
+[16-Jul-2025 13:16:55 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp\htdocs\SereneTripsLK\admin\config.php on line 41
+[16-Jul-2025 13:17:31 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 20
+[16-Jul-2025 13:17:31 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[16-Jul-2025 13:17:31 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 23
+[16-Jul-2025 13:17:31 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 25
+[16-Jul-2025 13:17:31 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 26
+[17-Jul-2025 05:14:42 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp\htdocs\SereneTripsLK\admin\config.php on line 41
+[17-Jul-2025 05:15:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 20
+[17-Jul-2025 05:15:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[17-Jul-2025 05:15:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 23
+[17-Jul-2025 05:15:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 25
+[17-Jul-2025 05:15:23 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 26
+[17-Jul-2025 05:16:02 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp\htdocs\SereneTripsLK\admin\config.php on line 41
+[17-Jul-2025 05:41:22 Europe/Berlin] PHP Warning:  session_set_cookie_params(): Session cookie parameters cannot be changed when a session is active in C:\xampp\htdocs\SereneTripsLK\admin\config.php on line 41
+[17-Jul-2025 05:41:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 20
+[17-Jul-2025 05:41:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[17-Jul-2025 05:41:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 23
+[17-Jul-2025 05:41:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 25
+[17-Jul-2025 05:41:51 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 26

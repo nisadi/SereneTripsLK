@@ -26,7 +26,7 @@ $packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
             background: #f5f5f5;
         }
         .admin-header {
-            background: #8e44ad;
+            background: linear-gradient(to right, #b602b6, #750587);
             color: white;
             padding: 1rem 2rem;
             display: flex;

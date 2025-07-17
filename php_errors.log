@@ -1,0 +1,85 @@
+[15-Jul-2025 07:38:36 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\admin\login.php on line 17
+[15-Jul-2025 07:38:37 Europe/Berlin] Failed login attempt for username: admin
+[15-Jul-2025 07:39:24 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\admin\login.php on line 17
+[15-Jul-2025 07:39:25 Europe/Berlin] Failed login attempt for username: admin
+[15-Jul-2025 07:39:35 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\admin\login.php on line 17
+[15-Jul-2025 07:39:35 Europe/Berlin] Failed login attempt for username: admin
+[15-Jul-2025 07:40:34 Europe/Berlin] Failed login attempt for username: admin
+[15-Jul-2025 07:45:35 Europe/Berlin] Failed login attempt for username: admin
+[15-Jul-2025 07:47:12 Europe/Berlin] Failed login attempt for username: admin
+[15-Jul-2025 07:56:16 Europe/Berlin] Failed login attempt for username: nisadi
+[15-Jul-2025 11:23:33 Europe/Berlin] Failed login attempt for username: admin
+[15-Jul-2025 11:33:00 Europe/Berlin] PHP Warning:  Undefined array key "password_hash" in C:\xampp\htdocs\SereneTripsLK\admin\login.php on line 33
+[15-Jul-2025 11:33:00 Europe/Berlin] PHP Deprecated:  password_verify(): Passing null to parameter #2 ($hash) of type string is deprecated in C:\xampp\htdocs\SereneTripsLK\admin\login.php on line 33
+[15-Jul-2025 11:33:00 Europe/Berlin] Failed login attempt for username: Admin
+[15-Jul-2025 20:02:28 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 17
+[15-Jul-2025 20:02:28 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 19
+[15-Jul-2025 20:02:28 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 20
+[15-Jul-2025 20:02:28 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[15-Jul-2025 20:02:28 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 23
+[15-Jul-2025 20:02:28 Europe/Berlin] PHP Deprecated:  strtotime(): Passing null to parameter #1 ($datetime) of type string is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 26
+[15-Jul-2025 20:02:28 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause' in C:\xampp\htdocs\SereneTripsLK\Book.php:8
+Stack trace:
+#0 C:\xampp\htdocs\SereneTripsLK\Book.php(8): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in C:\xampp\htdocs\SereneTripsLK\Book.php on line 8
+[15-Jul-2025 20:02:36 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause' in C:\xampp\htdocs\SereneTripsLK\Book.php:8
+Stack trace:
+#0 C:\xampp\htdocs\SereneTripsLK\Book.php(8): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in C:\xampp\htdocs\SereneTripsLK\Book.php on line 8
+[15-Jul-2025 20:03:05 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause' in C:\xampp\htdocs\SereneTripsLK\Book.php:8
+Stack trace:
+#0 C:\xampp\htdocs\SereneTripsLK\Book.php(8): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in C:\xampp\htdocs\SereneTripsLK\Book.php on line 8
+[15-Jul-2025 20:03:35 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause' in C:\xampp\htdocs\SereneTripsLK\Book.php:8
+Stack trace:
+#0 C:\xampp\htdocs\SereneTripsLK\Book.php(8): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in C:\xampp\htdocs\SereneTripsLK\Book.php on line 8
+[15-Jul-2025 20:03:37 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause' in C:\xampp\htdocs\SereneTripsLK\Book.php:8
+Stack trace:
+#0 C:\xampp\htdocs\SereneTripsLK\Book.php(8): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in C:\xampp\htdocs\SereneTripsLK\Book.php on line 8
+[15-Jul-2025 20:03:43 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause' in C:\xampp\htdocs\SereneTripsLK\Book.php:8
+Stack trace:
+#0 C:\xampp\htdocs\SereneTripsLK\Book.php(8): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in C:\xampp\htdocs\SereneTripsLK\Book.php on line 8
+[15-Jul-2025 20:04:15 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause' in C:\xampp\htdocs\SereneTripsLK\Book.php:8
+Stack trace:
+#0 C:\xampp\htdocs\SereneTripsLK\Book.php(8): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in C:\xampp\htdocs\SereneTripsLK\Book.php on line 8
+[15-Jul-2025 20:04:16 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause' in C:\xampp\htdocs\SereneTripsLK\Book.php:8
+Stack trace:
+#0 C:\xampp\htdocs\SereneTripsLK\Book.php(8): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in C:\xampp\htdocs\SereneTripsLK\Book.php on line 8
+[15-Jul-2025 20:05:14 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause' in C:\xampp\htdocs\SereneTripsLK\Book.php:8
+Stack trace:
+#0 C:\xampp\htdocs\SereneTripsLK\Book.php(8): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in C:\xampp\htdocs\SereneTripsLK\Book.php on line 8
+[15-Jul-2025 20:05:14 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause' in C:\xampp\htdocs\SereneTripsLK\Book.php:8
+Stack trace:
+#0 C:\xampp\htdocs\SereneTripsLK\Book.php(8): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in C:\xampp\htdocs\SereneTripsLK\Book.php on line 8
+[15-Jul-2025 20:05:21 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'status' in 'where clause' in C:\xampp\htdocs\SereneTripsLK\Book.php:8
+Stack trace:
+#0 C:\xampp\htdocs\SereneTripsLK\Book.php(8): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in C:\xampp\htdocs\SereneTripsLK\Book.php on line 8
+[15-Jul-2025 20:17:24 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 17
+[15-Jul-2025 20:17:24 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 19
+[15-Jul-2025 20:17:24 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 20
+[15-Jul-2025 20:17:24 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[15-Jul-2025 20:17:24 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 23
+[15-Jul-2025 20:18:04 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 17
+[15-Jul-2025 20:18:04 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 19
+[15-Jul-2025 20:18:04 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 20
+[15-Jul-2025 20:18:04 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 22
+[15-Jul-2025 20:18:04 Europe/Berlin] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in C:\xampp\htdocs\SereneTripsLK\book_form.php on line 23
