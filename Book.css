@@ -74,7 +74,7 @@ body {
 
 .heading-title {
   font-size: clamp(1.8rem, 4vw, 2.5rem);
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   color: #222;
   text-align: center;
   font-weight: 700;
@@ -136,7 +136,7 @@ body {
   display: block; /* Change from inline-block to block */
   width: 220px;
   padding: 16px 20px;
-  background: linear-gradient(135deg, #888888, #555555);
+  background: linear-gradient(to right, #a9c5e0, #ebd253);
   color: white;
   font-size: 1rem;
   font-weight: 600;

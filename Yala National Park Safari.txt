@@ -11,3 +11,12 @@ Includes:
 All park fees
 Bush dinners & breakfasts
 Wildlife expert guide
+
+
+
+
+.inputBox label {  
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
